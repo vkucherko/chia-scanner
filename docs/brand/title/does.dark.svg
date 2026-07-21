@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232 32" width="232" height="32" role="img" aria-label="What it does"><g transform="translate(6 2) scale(0.0546875)"><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+fill="#EDE4D8" stroke="none">
+<path d="M3830 4790 c-529 -40 -959 -121 -1355 -257 -912 -313 -1492 -872
+-1720 -1658 -72 -249 -99 -463 -99 -790 0 -274 12 -411 59 -690 l24 -140 -206
+-359 c-131 -230 -207 -373 -210 -397 -20 -144 158 -236 262 -136 18 18 113
+169 210 337 761 1307 1393 2077 2085 2538 127 85 435 252 464 252 6 0 -30 -24
+-80 -54 -662 -395 -1250 -1121 -1868 -2308 l-87 -166 28 -6 c170 -35 747 -57
+978 -37 1080 95 1697 620 1970 1676 48 187 94 430 150 800 113 751 161 926
+304 1103 29 36 53 77 57 98 14 78 -37 161 -114 185 -47 14 -694 21 -852 9z"/>
+</g></g><text x="46" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#EDE4D8" dominant-baseline="central">What it does</text></svg>

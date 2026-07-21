@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <style>
+    :root{ --e:cubic-bezier(.23,1,.32,1); --wave:cubic-bezier(.45,0,.55,1); }
+    .fade{ opacity:0; animation:fade .5s var(--e) forwards; }
+    @keyframes fade{ to{opacity:1} }
+    .rise{ opacity:0; animation:fade .6s var(--e) .05s forwards; }
+    .b1{ animation-delay:.5s } .b2{ animation-delay:.6s } .b3{ animation-delay:.7s } .b4{ animation-delay:.8s }
+    .bars{ animation-delay:1.05s } .blabel{ animation-delay:1.15s }
+    .sweep{ transform-box:fill-box; opacity:0; animation:sweep 1.25s linear 1.3s 1 forwards; }
+    @keyframes sweep{ 0%{opacity:0; transform:translateY(0)} 8%{opacity:.95} 92%{opacity:.9} 100%{opacity:0; transform:translateY(238px)} }
+    .passbg{ opacity:0; animation:fade .45s var(--e) 2.5s forwards; }
+    /* leaf draw-in — strokeDashoffset per path, linear, real sequence + durations */
+    .draw{ animation:draw linear forwards; }
+    @keyframes draw{ to{ stroke-dashoffset:0 } }
+    .d-stem  { stroke-dashoffset:115;   animation:draw .22s linear 2.6s forwards; }
+    .d-top   { stroke-dashoffset:130;    animation:draw .24s linear 2.82s forwards; }
+    .d-topv  { stroke-dashoffset:44;   animation:draw .14s linear 3.06s forwards; }
+    .d-branch{ stroke-dashoffset:32; animation:draw .16s linear 3.20s forwards; }
+    .d-side  { stroke-dashoffset:100;   animation:draw .16s linear 3.36s forwards; }
+    .d-sidev { stroke-dashoffset:34;  animation:draw .09s linear 3.52s forwards; }
+    .pot{ opacity:0; animation:fade .3s var(--e) 2.55s forwards; }
+    /* happy wave — leaves pivot ±8° around their base, 2 cycles, then rest */
+    .wave-top { transform-box:view-box; transform-origin:60px 48px; animation:waveT .64s var(--wave) 3.79s 1 both; }
+    .wave-side{ transform-box:view-box; transform-origin:78px 56px; animation:waveT .64s var(--wave) 3.79s 1 both; }
+    @keyframes waveT{ 0%{transform:rotate(0)} 12.5%{transform:rotate(8deg)} 37.5%{transform:rotate(-8deg)} 62.5%{transform:rotate(8deg)} 87.5%{transform:rotate(-8deg)} 100%{transform:rotate(0)} }
+    /* settle — compress→rebound→land, the slam punctuation */
+    .settle{ transform-box:fill-box; transform-origin:50% 74%; animation:settle .3s var(--e) 4.43s 1 both; }
+    @keyframes settle{ 0%{transform:scale(1)} 40%{transform:scale(.97)} 74%{transform:scale(1.045)} 100%{transform:scale(1)} }
+    .gp{ opacity:0; animation:fade .5s var(--e) 4.5s forwards; }
+    .lg{ clip-path:inset(0 100% 0 0); animation:type .4s linear forwards; }
+    @keyframes type{ to{ clip-path:inset(0 0 0 0) } }
+    .l1{ animation-delay:1.5s } .l2{ animation-delay:1.85s } .l3{ animation-delay:2.2s } .l4{ animation-delay:2.55s } .l5{ animation-delay:2.9s } .l6{ animation-delay:3.2s } .l7{ animation-delay:3.55s }
+    .cursor{ animation:blink 1s step-end 3.7s infinite }
+    @keyframes blink{ 50%{opacity:0} }
+    @media (prefers-reduced-motion:reduce){
+      .fade,.rise,.passbg,.pot,.gp{ opacity:1; animation:none } .rise{ transform:none }
+      .sweep,.cursor{ opacity:0; animation:none }
+      .lg{ clip-path:none; animation:none }
+      .draw,.d-stem,.d-top,.d-topv,.d-branch,.d-side,.d-sidev{ stroke-dashoffset:0; animation:none }
+      .wave-top,.wave-side,.settle{ transform:none; animation:none }
+    }
+  </style>
+  <defs>
+    <linearGradient id="amb" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#EFC9A4"/><stop offset="0.5" stop-color="#DDD2B4"/><stop offset="1" stop-color="#BFD3AE"/>
+    </linearGradient>
+    <linearGradient id="cam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#46433C"/><stop offset="1" stop-color="#332F2A"/></linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.5"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="sweepg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A8C2A0" stop-opacity="0"/><stop offset="0.5" stop-color="#A8C2A0" stop-opacity="0.9"/><stop offset="1" stop-color="#A8C2A0" stop-opacity="0"/></linearGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="125%"><feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#7d5f45" flood-opacity="0.18"/></filter>
+    <filter id="card" x="-12%" y="-12%" width="124%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#5f4a37" flood-opacity="0.14"/></filter>
+    <clipPath id="vfclip"><rect x="66" y="58" width="292" height="292" rx="20"/></clipPath>
+  </defs>
+
+  <!-- ambient-gradient screen (the app background) -->
+  <rect x="6" y="6" width="888" height="388" rx="24" fill="url(#amb)" filter="url(#soft)"/>
+
+  <g class="rise">
+    <!-- viewfinder: camera panel + ribbon brackets + barcode + sweep -->
+    <rect x="66" y="58" width="292" height="292" rx="20" fill="url(#cam)"/>
+    <g clip-path="url(#vfclip)">
+      <g class="fade bars" fill="#EDE7DD"><rect x="110" y="150" width="3" height="86"/><rect x="118" y="150" width="2" height="86"/><rect x="125" y="150" width="4" height="86"/><rect x="134" y="150" width="2" height="86"/><rect x="141" y="150" width="3" height="86"/><rect x="149" y="150" width="2" height="86"/><rect x="156" y="150" width="5" height="86"/><rect x="166" y="150" width="2" height="86"/><rect x="173" y="150" width="3" height="86"/><rect x="181" y="150" width="4" height="86"/><rect x="190" y="150" width="2" height="86"/><rect x="197" y="150" width="3" height="86"/><rect x="205" y="150" width="2" height="86"/><rect x="212" y="150" width="5" height="86"/><rect x="222" y="150" width="2" height="86"/><rect x="229" y="150" width="3" height="86"/><rect x="237" y="150" width="4" height="86"/><rect x="246" y="150" width="2" height="86"/><rect x="253" y="150" width="3" height="86"/><rect x="261" y="150" width="2" height="86"/><rect x="268" y="150" width="4" height="86"/></g>
+      <text class="fade blabel" x="212" y="248" text-anchor="middle" font-size="12" font-family="ui-monospace, 'SF Mono', Menlo, monospace" fill="#B8AE9F" letter-spacing="1.5">8 901234 567890</text>
+      <rect class="sweep" x="66" y="62" width="292" height="16" fill="url(#sweepg)"/>
+    </g>
+    <!-- the real ribbon-fold ScanBracketGlyph (back = sage, front = peach) -->
+    <svg x="66" y="58" width="292" height="292" viewBox="120 120 1014 1014">
+      <g class="fade b1"><path d="M 192 192 L 183 205 L 173 226 L 166 248 L 160 278 L 158 298 L 158 346 L 162 376 L 169 400 L 175 413 L 184 427 L 197 440 L 206 446 L 221 452 L 246 452 L 261 446 L 272 438 L 279 430 L 288 414 L 295 387 L 295 358 L 292 341 L 284 315 L 258 256 L 249 231 L 220 215 L 201 200 L 194 192 Z" fill="#BFD3AE"/><path d="M 195 189 L 196 194 L 220 214 L 259 235 L 303 251 L 350 259 L 376 259 L 391 257 L 410 252 L 427 244 L 438 236 L 446 227 L 452 216 L 455 205 L 454 189 L 448 175 L 441 166 L 428 155 L 409 145 L 392 139 L 350 132 L 319 132 L 300 134 L 271 140 L 253 146 L 221 163 L 212 170 Z" fill="#EFC9A4"/></g>
+      <g class="fade b2"><path d="M 1062 193 L 1060 193 L 1039 212 L 1006 231 L 996 259 L 973 310 L 962 346 L 960 360 L 960 387 L 966 412 L 973 426 L 984 439 L 997 448 L 1014 453 L 1027 453 L 1042 449 L 1058 439 L 1067 430 L 1075 419 L 1084 401 L 1093 367 L 1096 318 L 1094 287 L 1090 260 L 1077 218 L 1070 204 Z" fill="#BFD3AE"/><path d="M 801 207 L 803 215 L 812 230 L 826 242 L 841 250 L 871 258 L 908 259 L 941 254 L 988 239 L 1017 225 L 1039 211 L 1060 192 L 1060 190 L 1036 165 L 1024 157 L 999 145 L 984 140 L 955 134 L 936 132 L 905 132 L 881 135 L 860 140 L 846 145 L 826 156 L 811 170 L 804 182 L 801 192 Z" fill="#EFC9A4"/></g>
+      <g class="fade b4"><path d="M 246 790 L 230 790 L 215 794 L 202 802 L 189 815 L 173 842 L 162 880 L 159 909 L 159 936 L 165 988 L 176 1025 L 184 1041 L 194 1055 L 225 1032 L 249 1019 L 257 997 L 285 936 L 298 892 L 300 873 L 299 853 L 293 830 L 287 818 L 269 799 L 260 794 Z" fill="#BFD3AE"/><path d="M 458 1039 L 455 1028 L 448 1016 L 436 1005 L 421 997 L 389 989 L 349 989 L 307 997 L 265 1012 L 240 1024 L 216 1039 L 197 1055 L 197 1058 L 209 1071 L 222 1081 L 240 1091 L 264 1100 L 307 1108 L 351 1109 L 371 1107 L 394 1102 L 412 1096 L 430 1087 L 437 1082 L 452 1065 L 457 1053 Z" fill="#EFC9A4"/></g>
+      <g class="fade b3"><path d="M 997 791 L 988 794 L 975 802 L 965 812 L 954 832 L 948 859 L 948 882 L 950 896 L 961 934 L 994 1008 L 997 1019 L 1022 1032 L 1053 1055 L 1063 1042 L 1073 1021 L 1079 1003 L 1085 974 L 1088 944 L 1088 908 L 1082 865 L 1075 844 L 1064 823 L 1052 808 L 1044 801 L 1032 794 L 1022 791 Z" fill="#BFD3AE"/><path d="M 788 1036 L 788 1051 L 797 1070 L 809 1082 L 837 1097 L 861 1104 L 885 1108 L 930 1109 L 957 1106 L 984 1100 L 1001 1094 L 1024 1082 L 1035 1074 L 1050 1058 L 1050 1055 L 1037 1043 L 1012 1027 L 981 1012 L 939 997 L 896 989 L 856 989 L 836 993 L 822 998 L 808 1006 L 799 1014 L 793 1022 Z" fill="#EFC9A4"/></g>
+    </svg>
+
+    <!-- verdict overlay (pass): cream passBg + potted-plant leaf glyph + caption -->
+    <rect class="passbg" x="66" y="58" width="292" height="292" rx="20" fill="#EFF5EE"/>
+    <svg class="passbg" x="134" y="112" width="156" height="156" viewBox="0 0 120 120" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <g class="settle" stroke="#5A7456">
+        <path class="pot" d="M 18 98 L 18 115 L 102 115 L 102 98" stroke-width="7.5"/>
+        <path class="draw d-stem" d="M 60 104 C 60 85 60 67 60 48" stroke-width="7" stroke-dasharray="115"/>
+        <path class="draw d-branch" d="M 60 70 C 65 65 72 60 78 56" stroke-width="4.5" stroke-dasharray="32"/>
+        <g class="wave-side">
+          <path class="draw d-side" d="M 78.211 55.57 C 94.805 55.744 103.079 48.802 105.789 32.43 C 89.195 32.256 80.921 39.198 78.211 55.57 Z" stroke-width="3" stroke-dasharray="100"/>
+          <path class="draw d-sidev" d="M 80.28 53.835 L 103.72 34.165" stroke-width="1.2" stroke-dasharray="34"/>
+        </g>
+        <g class="wave-top">
+          <path class="draw d-top" d="M 60 48 C 74.4 31.2 74.4 16.8 60 0 C 45.6 16.8 45.6 31.2 60 48 Z" stroke-width="4" stroke-dasharray="130"/>
+          <path class="draw d-topv" d="M 60 44.4 L 60 3.6" stroke-width="1.5" stroke-dasharray="44"/>
+        </g>
+      </g>
+    </svg>
+    <text class="gp" x="212" y="330" text-anchor="middle" font-size="21" font-weight="800" fill="#2C2825">Great pick!</text>
+
+    <!-- Liquid-Glass pipeline log card -->
+    <g filter="url(#card)">
+      <rect x="398" y="66" width="436" height="268" rx="20" fill="#ffffff" fill-opacity="0.58"/>
+      <rect x="398" y="66" width="436" height="268" rx="20" fill="none" stroke="#ffffff" stroke-opacity="0.65" stroke-width="1"/>
+      <path d="M398 86 A20 20 0 0 1 418 66 L814 66 A20 20 0 0 1 834 86 L834 150 L398 150 Z" fill="url(#sheen)" opacity="0.5"/>
+    </g>
+    <g font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="14">
+      <text class="lg l1" x="424" y="112" fill="#6E675E">scan   <tspan fill="#2C2825">8 901234 567890</tspan></text>
+      <text class="lg l2" x="424" y="142" fill="#6E675E">cache  <tspan fill="#2C2825">MMKV · SQLite</tspan> <tspan fill="#9D553A">miss</tspan></text>
+      <text class="lg l3" x="424" y="172" fill="#6E675E">edge   <tspan fill="#2C2825">Worker → KV · Supabase</tspan></text>
+      <text class="lg l4" x="424" y="202" fill="#6E675E">merge  <tspan fill="#2C2825">USDA ⊕ OpenFoodFacts</tspan></text>
+      <text class="lg l5" x="424" y="232" fill="#6E675E">eval   <tspan fill="#2C2825">65 rules · 0 flags</tspan></text>
+      <text class="lg l6" x="424" y="258" fill="#CFC6BA">──────────────────────────</text>
+      <text class="lg l7" x="424" y="288" font-weight="700" fill="#5A7456">✓ PASS · Great pick!</text>
+      <rect class="cursor" x="424" y="304" width="9" height="17" fill="#5A7456"/>
+    </g>
+  </g>
+</svg>

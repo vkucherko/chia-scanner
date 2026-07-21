@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420" role="img" aria-label="Terminal window. slav@quality-engineer runs whoami → Slav Kucherko, AI Quality Engineer, 9+ years. An agentic QA pipeline shimmers through story, design, generate, then run fails and self-heals; the suite is executed.">
+  <title>Slav Kucherko — AI Quality Engineer · agentic test automation</title>
+
+  <defs>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/><stop offset="0.5" stop-color="#a855f7"/><stop offset="1" stop-color="#f472b6"/>
+    </linearGradient>
+    <linearGradient id="win" gradientUnits="userSpaceOnUse" x1="0" y1="16" x2="0" y2="404">
+      <stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#080b16"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0" r="1">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.10"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#cdeeff" stop-opacity="0"/><stop offset="0.5" stop-color="#d6f2ff" stop-opacity="0.6"/><stop offset="1" stop-color="#cdeeff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="6"/></filter>
+    <clipPath id="screen"><rect x="16" y="16" width="828" height="388" rx="14"/></clipPath>
+    <clipPath id="clipS"><rect x="40" y="262" width="66" height="28" rx="8"/></clipPath>
+    <clipPath id="clipD"><rect x="126" y="262" width="84" height="28" rx="8"/></clipPath>
+    <clipPath id="clipG"><rect x="230" y="262" width="98" height="28" rx="8"/></clipPath>
+    <clipPath id="clipH"><rect x="432" y="262" width="72" height="28" rx="8"/></clipPath>
+    <!-- name + status values (executed/1/0) reveal via CSS clip-path:inset on the text elements themselves — see <style> -->
+
+
+    <style>
+      :root{ --e-out: cubic-bezier(0.23,1,0.32,1); --e-io: cubic-bezier(0.77,0,0.175,1); }
+      .mono{ font-family:'SFMono-Regular',ui-monospace,'Cascadia Code','Fira Code',Menlo,Consolas,monospace; }
+      .prompt{ fill:#22d3ee; } .cmd{ fill:#cbd5e8; } .muted{ fill:#67748c; }
+      .arrow-h{ fill:#8b5cf6; } .name{ fill:#eaf2ff; } .role{ fill:#9fb0c8; }
+      .chipbox{ fill:#0f1626; stroke:#26324a; stroke-width:1.2; } .chiptext{ fill:#aeb9cd; }
+      .conn{ stroke:#334158; stroke-width:1.6; fill:none; stroke-linecap:round; }
+
+      @keyframes winIn{ from{opacity:0;transform:scale(.985)} to{opacity:1;transform:scale(1)} }
+      @keyframes lineIn{ from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+      @keyframes chipIn{ from{opacity:0;transform:scale(.92)} to{opacity:1;transform:scale(1)} }
+      @keyframes drawIn{ from{stroke-dashoffset:var(--len)} to{stroke-dashoffset:0} }
+      @keyframes fadeIn{ from{opacity:0} to{opacity:1} }
+      @keyframes typeIn{ to{ clip-path:inset(0 0 0 0); } }
+      @keyframes typeCaret{ 0%{opacity:1;transform:translateX(0)} 33%{opacity:1;transform:translateX(72px)} 40%{transform:translateX(225px)} 48%{transform:translateX(234px)} 80%{transform:translateX(369px)} 92%{opacity:1;transform:translateX(378px)} 100%{opacity:0;transform:translateX(378px)} }
+      @keyframes caretRide{ 0%{opacity:1;transform:translateX(0)} 92%{opacity:1;transform:translateX(205px)} 100%{opacity:0;transform:translateX(205px)} }
+      @keyframes blink{ 0%,49%{opacity:1} 50%,100%{opacity:0} }
+      @keyframes sweepS{ 0%{transform:translateX(-72px);opacity:0} 20%{opacity:.9} 80%{opacity:.9} 100%{transform:translateX(72px);opacity:0} }
+      @keyframes sweepD{ 0%{transform:translateX(-92px);opacity:0} 20%{opacity:.9} 80%{opacity:.9} 100%{transform:translateX(92px);opacity:0} }
+      @keyframes sweepG{ 0%{transform:translateX(-108px);opacity:0} 20%{opacity:.9} 80%{opacity:.9} 100%{transform:translateX(108px);opacity:0} }
+      @keyframes sweepH{ 0%{transform:translateX(-80px);opacity:0} 20%{opacity:.9} 80%{opacity:.9} 100%{transform:translateX(80px);opacity:0} }
+      @keyframes runFlash{ 0%{fill:#2a1420;stroke:#ff5c72} 5%{fill:#3a1a10;stroke:#ff5c72} 56%{fill:#3a1a10;stroke:#ff5c72} 74%{fill:#3a2a10;stroke:#f5b544} 100%{fill:#0f2a20;stroke:#34d399} }
+      @keyframes runTextFlash{ 0%{fill:#ff5c72} 56%{fill:#ff5c72} 74%{fill:#f5b544} 100%{fill:#5eead4} }
+      @keyframes healPulse{ 0%{opacity:0;transform:scale(.6)} 40%{opacity:.9} 100%{opacity:0;transform:scale(2.1)} }
+      @keyframes tagIn{ 0%{opacity:0} 9%{opacity:1} 86%{opacity:1} 100%{opacity:0} }
+      @keyframes rowSettle{ 0%{filter:none} 50%{filter:drop-shadow(0 0 6px rgba(52,211,153,.55))} 100%{filter:none} }
+      @keyframes scan{ from{transform:translateY(-40px)} to{transform:translateY(420px)} }
+
+      .win{ transform-box:fill-box; transform-origin:center; animation:winIn .75s var(--e-out) both; }
+      .r-title{ animation:lineIn .55s var(--e-out) .45s both; }
+      .r1{ animation:lineIn .5s var(--e-out) .95s both; }
+      .r-arrow{ animation:lineIn .5s var(--e-out) 1.35s both; }
+      .caret1{ transform-box:fill-box; opacity:0; animation:caretRide 1.7s steps(13) 1.45s forwards; }
+      .name{ clip-path:inset(0 100% 0 0); animation:typeIn 1.5s steps(13) 1.45s forwards; }
+      .r-role{ animation:lineIn .55s var(--e-out) 3.15s both; }
+      .r3{ animation:lineIn .5s var(--e-out) 3.7s both; }
+
+      .chip{ transform-box:fill-box; transform-origin:center; animation:chipIn .45s var(--e-out) both; }
+      .c1{ animation-delay:4.15s } .c2{ animation-delay:4.27s } .c3{ animation-delay:4.39s }
+      .c4{ animation-delay:4.51s } .c5{ animation-delay:4.63s } .c6{ animation-delay:4.75s }
+      .conn{ stroke-dasharray:var(--len); animation:drawIn .45s var(--e-io) both; }
+      .k1{ animation-delay:4.22s } .k2{ animation-delay:4.34s } .k3{ animation-delay:4.46s }
+      .k4{ animation-delay:4.58s } .k5{ animation-delay:4.72s }
+      .shS{ animation:sweepS .85s ease-in-out 5.0s 1 both; }
+      .shD{ animation:sweepD .85s ease-in-out 5.65s 1 both; }
+      .shG{ animation:sweepG .85s ease-in-out 6.3s 1 both; }
+
+      .runbox{ animation:runFlash 2.7s var(--e-io) 7.35s both; }
+      .runtext{ animation:runTextFlash 2.7s var(--e-io) 7.35s both; }
+      .failtag{ opacity:0; animation:tagIn 1.2s linear 7.65s both; }
+      .shH{ animation:sweepH .85s ease-in-out 9.1s 1 both; }
+      .heal-ring{ transform-box:fill-box; transform-origin:center; opacity:0; animation:healPulse 1s var(--e-out) 9.0s 1 both; }
+      .check{ stroke-dasharray:var(--len); animation:drawIn .55s var(--e-out) 9.95s both; }
+      .row{ transform-box:fill-box; transform-origin:center; animation:rowSettle .8s ease 9.95s 1; }
+      .r-status{ opacity:0; animation:fadeIn .5s ease 10.25s forwards; }
+      .v-exec{ clip-path:inset(0 100% 0 0); animation:typeIn .5s steps(8) 10.85s forwards; }
+      .v-1{ clip-path:inset(0 100% 0 0); animation:typeIn .34s linear 11.45s forwards; }
+      .v-0{ clip-path:inset(0 100% 0 0); animation:typeIn .34s linear 12.25s forwards; }
+      .caret3{ transform-box:fill-box; opacity:0; animation:typeCaret 1.5s linear 10.85s forwards; }
+      .caret2{ opacity:0; animation:blink 1s steps(1) 12.4s infinite; }
+      .scan{ animation:scan 8s linear 0s infinite; }
+
+      @media (prefers-reduced-motion: reduce){
+        *{ animation:none !important; }
+        .r-status{ opacity:1; } .name,.v-exec,.v-1,.v-0{ clip-path:none; } .caret1,.caret3{ opacity:0; } .scan{ opacity:0; } .shS,.shD,.shG,.shH{ opacity:0; }
+      }
+    </style>
+  </defs>
+
+  <rect x="16" y="16" width="828" height="388" rx="14" fill="none" stroke="url(#neon)" stroke-width="3" opacity="0.45" filter="url(#soft)"/>
+
+  <g class="win">
+    <rect x="16" y="16" width="828" height="388" rx="14" fill="url(#win)" stroke="url(#neon)" stroke-width="1.5"/>
+    <rect x="16" y="16" width="828" height="388" rx="14" fill="url(#glow)"/>
+    <g clip-path="url(#screen)"><rect class="scan" x="16" y="0" width="828" height="40" fill="#22d3ee" opacity="0.05"/></g>
+
+    <!-- title bar: … agentic-qa %  ·  [term icon] zsh -->
+    <g class="r-title">
+      <circle cx="44" cy="40" r="6" fill="#ff5f57"/><circle cx="66" cy="40" r="6" fill="#febc2e"/><circle cx="88" cy="40" r="6" fill="#28c840"/>
+      <text class="mono muted" x="118" y="45" font-size="14">slav@quality-engineer&#160;&#160;—&#160;&#160;agentic-qa&#160;%&#160;&#160;·&#160;&#160;</text>
+      <g transform="translate(486,36)" fill="none" stroke="#67748c" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="0.65" y="0.65" width="15" height="13" rx="2.6"/>
+        <path d="M3.6 3.6 L6.6 6.3 L3.6 9"/>
+        <line x1="7.6" y1="9.2" x2="11.6" y2="9.2"/>
+      </g>
+      <text class="mono muted" x="508" y="45" font-size="14">zsh</text>
+    </g>
+    <line x1="16" y1="62" x2="844" y2="62" stroke="#1b2436" stroke-width="1"/>
+
+    <g class="r1"><text class="mono prompt" x="40" y="108" font-size="16">$</text><text class="mono cmd" x="60" y="108" font-size="16">whoami</text></g>
+
+    <g class="r-arrow"><text class="mono arrow-h" x="40" y="150" font-size="17">→</text></g>
+    <text class="mono name" x="66" y="153" font-size="25" font-weight="700">Slav&#160;Kucherko</text>
+    <rect class="caret1" x="66" y="131" width="12" height="27" fill="#5eead4"/>
+
+    <g class="r-role"><text class="mono role" x="67" y="183" font-size="15">AI&#160;Quality&#160;Engineer&#160;&#160;·&#160;&#160;9+&#160;yrs</text></g>
+
+    <g class="r3"><text class="mono prompt" x="40" y="228" font-size="16">$</text><text class="mono cmd" x="60" y="228" font-size="16">agentic-qa run <tspan class="muted">--story</tspan> PR-482 <tspan class="muted">--self-heal</tspan></text></g>
+
+    <g class="row">
+      <path class="conn k1" style="--len:20" d="M108 276 h16"/><path class="conn k2" style="--len:20" d="M212 276 h16"/><path class="conn k3" style="--len:20" d="M330 276 h16"/><path class="conn k4" style="--len:20" d="M414 276 h16"/><path class="conn k5" style="--len:22" d="M506 276 h18"/>
+
+      <g class="chip c1"><rect class="chipbox" x="40" y="262" width="66" height="28" rx="8"/><text class="mono chiptext" x="73" y="280" font-size="12" text-anchor="middle">story</text></g>
+      <g class="chip c2"><rect class="chipbox" x="126" y="262" width="84" height="28" rx="8"/><text class="mono chiptext" x="168" y="280" font-size="12" text-anchor="middle">design</text></g>
+      <g class="chip c3"><rect class="chipbox" x="230" y="262" width="98" height="28" rx="8"/><text class="mono chiptext" x="279" y="280" font-size="12" text-anchor="middle">generate</text></g>
+      <g class="chip c4"><rect class="runbox chipbox" x="348" y="262" width="64" height="28" rx="8" fill="#0f2a20" stroke="#34d399"/><text class="runtext mono" x="380" y="280" font-size="12" text-anchor="middle" fill="#5eead4">run</text><circle class="heal-ring" cx="380" cy="276" r="16" fill="none" stroke="#f5b544" stroke-width="2"/></g>
+      <g class="chip c5"><rect class="chipbox" x="432" y="262" width="72" height="28" rx="8"/><text class="mono chiptext" x="468" y="280" font-size="12" text-anchor="middle">heal</text></g>
+      <g class="chip c6"><circle cx="544" cy="276" r="15" fill="#0f2a20" stroke="#34d399" stroke-width="1.4"/><path class="check" style="--len:22" d="M537 276 l5 5 l9 -11" fill="none" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+
+      <!-- sheen sweep across each chip in turn, with a pause between -->
+      <g clip-path="url(#clipS)"><rect class="shS" x="40" y="262" width="66" height="28" fill="url(#sheen)"/></g>
+      <g clip-path="url(#clipD)"><rect class="shD" x="126" y="262" width="84" height="28" fill="url(#sheen)"/></g>
+      <g clip-path="url(#clipG)"><rect class="shG" x="230" y="262" width="98" height="28" fill="url(#sheen)"/></g>
+      <g clip-path="url(#clipH)"><rect class="shH" x="432" y="262" width="72" height="28" fill="url(#sheen)"/></g>
+
+      <text class="failtag mono" x="380" y="314" font-size="11" text-anchor="middle" fill="#ff8493">flaky selector → patched</text>
+    </g>
+
+    <g class="r-status">
+      <path d="M42 345 l5 5 l9 -11" fill="none" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text class="mono" x="60" y="354" font-size="15" fill="#9fb0c8">suite </text>
+      <text class="mono v-exec" x="114" y="354" font-size="15" fill="#34d399" font-weight="600">executed</text>
+      <text class="mono" x="186" y="354" font-size="15" fill="#9fb0c8"><tspan class="muted">&#160;&#160;·&#160;&#160;</tspan>self-healed </text>
+      <text class="mono v-1" x="339" y="354" font-size="15" fill="#eaf2ff">1</text>
+      <text class="mono" x="348" y="354" font-size="15" fill="#9fb0c8"><tspan class="muted">&#160;&#160;·&#160;&#160;</tspan>escalated </text>
+      <text class="mono v-0" x="483" y="354" font-size="15" fill="#eaf2ff">0</text>
+      <rect class="caret3" x="114" y="340" width="9" height="18" fill="#5eead4"/>
+      <rect class="caret2" x="495" y="340" width="9" height="18" fill="#5eead4"/>
+    </g>
+  </g>
+</svg>
