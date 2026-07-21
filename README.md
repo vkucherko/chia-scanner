@@ -1,17 +1,17 @@
+<h1 align="center">Chia</h1>
+
 <p align="center">
   <img src="docs/brand/app-icon.png" width="116" alt="Chia app icon" />
 </p>
 
-# Chia
-
-> The honest answer to "is this food actually healthy?", in under a second, even offline.
+<p align="center">The honest answer to "is this food actually healthy?", in under a second, even offline.</p>
 
 <p align="center">
   <img src="docs/brand/hero-slav.svg" width="100%" alt="Terminal: slav@quality-engineer runs an agentic QA pipeline, story to design to generate to run to heal to green. AI Quality Engineer, 9+ years." />
 </p>
 
 <p align="center">
-  <img src="docs/brand/hero.svg" width="100%" alt="Chia: scan a food barcode, get an instant pass/fail verdict. The scan viewfinder resolves to a sage leaf and 'Great pick!'; alongside, a pipeline log runs scan → cache → edge → merge → eval → PASS." />
+  <img src="docs/brand/hero.svg" width="100%" alt="Chia: scan a food barcode, get an instant pass/fail verdict. The viewfinder frames a strawberry Greek yogurt on a fridge shelf; the scan resolves to a wilted leaf and 'Better options out there' because it contains Red 40; alongside, a pipeline log runs scan → cache → edge → merge → eval → FAIL." />
 </p>
 
 <p align="center">
@@ -20,6 +20,8 @@
 </p>
 
 Chia is an iOS-first barcode scanner that gives you an instant pass / fail verdict on packaged foods, based on their actual ingredients and additives. Not a vague score, not a paywall, not a five-screen nutrition essay. Point the camera at a barcode; get a warm, honest answer with the reasons behind it.
+
+<br />
 
 <p align="center">
   <img src="https://img.shields.io/badge/platform-iOS-000000?style=flat-square&logo=apple&logoColor=white" alt="Platform iOS" />
@@ -32,6 +34,8 @@ Chia is an iOS-first barcode scanner that gives you an instant pass / fail verdi
   <img src="https://img.shields.io/badge/tests-30_files_·_400+_cases-6E9B6E?style=flat-square" alt="Tests" />
 </p>
 
+<br />
+
 <p align="center">
   <a href="#does"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/navbtn-does.dark.svg" /><img src="docs/brand/ui/navbtn-does.svg" height="34" alt="What it does" /></picture></a>
   <a href="#arch"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/navbtn-arch.dark.svg" /><img src="docs/brand/ui/navbtn-arch.svg" height="34" alt="Architecture" /></picture></a>
@@ -41,7 +45,7 @@ Chia is an iOS-first barcode scanner that gives you an instant pass / fail verdi
   <a href="#more"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/navbtn-more.dark.svg" /><img src="docs/brand/ui/navbtn-more.svg" height="34" alt="Contact" /></picture></a>
 </p>
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/source.dark.svg" /><img src="docs/brand/title/source.svg" height="32" alt="A note on the source" /></picture></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/source.dark.svg" /><img src="docs/brand/title/source.svg" height="32" align="absmiddle" alt="A note on the source" /></picture></p>
 
 This repository is a public showcase: architecture, design decisions, and engineering write-ups. The application source is private while Chia is in active, pre-launch development.
 
@@ -49,7 +53,7 @@ If you're a recruiter or engineer and want to go deeper, I'm happy to give a liv
 
 <a id="does"></a>
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/does.dark.svg" /><img src="docs/brand/title/does.svg" height="32" alt="What it does" /></picture></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/does.dark.svg" /><img src="docs/brand/title/does.svg" height="32" align="absmiddle" alt="What it does" /></picture></p>
 
 Chia is built around one fast, honest interaction.
 
@@ -70,7 +74,7 @@ Understand. Tap through to the product detail screen for the flagged ingredients
 
 Didn't find it? Packaged-food databases are never complete. When a barcode isn't found, Chia flips into a contribute flow: snap up to three label photos (front / ingredients / nutrition), and Google Gemini vision OCR extracts structured fields for you to confirm. Your submission is instantly available to the next person who scans it.
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/shots.dark.svg" /><img src="docs/brand/title/shots.svg" height="32" alt="Screenshots" /></picture></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/shots.dark.svg" /><img src="docs/brand/title/shots.svg" height="32" align="absmiddle" alt="Screenshots" /></picture></p>
 
 <!-- Drop portrait PNGs in docs/screenshots/ ; filenames below are the wired paths. -->
 
@@ -89,7 +93,7 @@ Screens are being captured; they will land here shortly.
 <a id="arch"></a>
 
 <details>
-<summary><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/arch.dark.svg" /><img src="docs/brand/title/arch.svg" height="32" alt="Architecture" /></picture></summary>
+<summary><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/arch.dark.svg" /><img src="docs/brand/title/arch.svg" height="32" align="absmiddle" alt="Architecture" /></picture></summary>
 
 Chia is a client-heavy, offline-first app in front of a serverless edge backend and a self-updating data pipeline. All the fast, private work (scanning, rule evaluation, caching, history) happens on device; the edge exists only to normalize and merge open food data. No third-party API is ever touched directly from the client.
 
@@ -189,7 +193,7 @@ The five pillars:
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/rule.dark.svg" /><img src="docs/brand/ui/rule.svg" width="86%" alt="" /></picture></p>
 
 <details>
-<summary><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/scan.dark.svg" /><img src="docs/brand/title/scan.svg" height="32" alt="How a scan works" /></picture></summary>
+<summary><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/scan.dark.svg" /><img src="docs/brand/title/scan.svg" height="32" align="absmiddle" alt="How a scan works" /></picture></summary>
 
 <details>
 <summary>Sequence diagram: the full scan → verdict path</summary>
@@ -249,7 +253,7 @@ The verdict state machine (`deriveVerdict`) collapses lookup status + evaluation
 <a id="eng"></a>
 
 <details>
-<summary><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/eng.dark.svg" /><img src="docs/brand/title/eng.svg" height="32" alt="Engineering highlights" /></picture></summary>
+<summary><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/eng.dark.svg" /><img src="docs/brand/title/eng.svg" height="32" align="absmiddle" alt="Engineering highlights" /></picture></summary>
 
 The things a strong engineer notices when they read past the screenshots:
 
@@ -278,7 +282,7 @@ The things a strong engineer notices when they read past the screenshots:
 <a id="stack"></a>
 
 <details>
-<summary><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/stack.dark.svg" /><img src="docs/brand/title/stack.svg" height="32" alt="Tech stack" /></picture></summary>
+<summary><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/stack.dark.svg" /><img src="docs/brand/title/stack.svg" height="32" align="absmiddle" alt="Tech stack" /></picture></summary>
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=ts,js,react,nodejs,githubactions,cloudflare,supabase,postgres,jest&perline=15" height="48" alt="TypeScript, JavaScript, React, Node.js, GitHub Actions, Cloudflare, Supabase, Postgres, Jest" />
@@ -310,7 +314,7 @@ The things a strong engineer notices when they read past the screenshots:
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/rule.dark.svg" /><img src="docs/brand/ui/rule.svg" width="86%" alt="" /></picture></p>
 
 <details>
-<summary><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/testing.dark.svg" /><img src="docs/brand/title/testing.svg" height="32" alt="Testing & quality" /></picture></summary>
+<summary><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/testing.dark.svg" /><img src="docs/brand/title/testing.svg" height="32" align="absmiddle" alt="Testing & quality" /></picture></summary>
 
 Chia is built like a product, not a prototype.
 
@@ -327,7 +331,7 @@ Chia is built like a product, not a prototype.
 <a id="roadmap"></a>
 
 <details>
-<summary><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/roadmap.dark.svg" /><img src="docs/brand/title/roadmap.svg" height="32" alt="Roadmap" /></picture></summary>
+<summary><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/roadmap.dark.svg" /><img src="docs/brand/title/roadmap.svg" height="32" align="absmiddle" alt="Roadmap" /></picture></summary>
 
 Honest, forward-looking, and clearly planned, not shipped:
 
@@ -344,7 +348,7 @@ Honest, forward-looking, and clearly planned, not shipped:
 
 <a id="more"></a>
 
-<p><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/more.dark.svg" /><img src="docs/brand/title/more.svg" height="32" alt="Let's talk" /></picture></p>
+<p><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/more.dark.svg" /><img src="docs/brand/title/more.svg" height="32" align="absmiddle" alt="Let's talk" /></picture></p>
 
 <p align="center">
   <img src="docs/brand/sig.svg" width="150" alt="SK monogram" />
@@ -356,5 +360,5 @@ Honest, forward-looking, and clearly planned, not shipped:
 
 <p align="center">
   <a href="https://www.linkedin.com/in/kucherko/"><img src="https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:vkucherko7@gmail.com"><img src="https://img.shields.io/badge/Email_me-EA4335?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0yMiA2YzAtMS4xLS45LTItMi0ySDRjLTEuMSAwLTIgLjktMiAydjEyYzAgMS4xLjkgMiAyIDJoMTZjMS4xIDAgMi0uOSAyLTJWNnptLTIgMC04IDUtOC01aDE2em0wIDEySDRWOGw4IDUgOC01djEweiIvPjwvc3ZnPgo%3D&logoColor=white" alt="Email" /></a>
+  <a href="mailto:vkucherko7@gmail.com"><img src="https://img.shields.io/badge/Email_me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
