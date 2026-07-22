@@ -195,7 +195,7 @@ The five pillars:
 <details>
 <summary><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/scan.dark.svg" /><img src="docs/brand/title/scan.svg" height="32" align="absmiddle" alt="How a scan works" /></picture></summary>
 
-<details>
+<details open>
 <summary>Sequence diagram: the full scan → verdict path</summary>
 
 ```mermaid
