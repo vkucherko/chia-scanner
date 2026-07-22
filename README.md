@@ -7,11 +7,11 @@
 <p align="center">The honest answer to "is this food actually healthy?", in under a second, even offline.</p>
 
 <p align="center">
-  <img src="docs/brand/hero-slav.svg" width="100%" alt="Terminal: slav@quality-engineer runs an agentic QA pipeline, story to design to generate to run to heal to green. AI Quality Engineer, 9+ years." />
+  <img src="docs/brand/hero.svg" width="100%" alt="Chia: scan a food barcode, get an instant pass/fail verdict. The viewfinder frames a strawberry Greek yogurt on a fridge shelf with the scan brackets on it; beside it a split panel shows the verdict (a wilted leaf and 'Better options out there' because the product contains Red 40) next to the pipeline log running scan → cache → edge → merge → eval → FAIL." />
 </p>
 
 <p align="center">
-  <img src="docs/brand/hero.svg" width="100%" alt="Chia: scan a food barcode, get an instant pass/fail verdict. The viewfinder frames a strawberry Greek yogurt on a fridge shelf; the scan resolves to a wilted leaf and 'Better options out there' because it contains Red 40; alongside, a pipeline log runs scan → cache → edge → merge → eval → FAIL." />
+  <img src="docs/brand/hero-slav.svg" width="100%" alt="Terminal: slav@quality-engineer runs an agentic QA pipeline, story to design to generate to run to heal to green. AI Quality Engineer, 9+ years." />
 </p>
 
 <p align="center">
