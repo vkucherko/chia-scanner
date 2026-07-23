@@ -15,13 +15,11 @@
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/kucherko/"><img src="docs/brand/badge-linkedin.svg" height="26" alt="LinkedIn: kucherko" /></a>
-  <a href="mailto:vkucherko7@gmail.com"><img src="docs/brand/badge-email.svg" height="26" alt="Email: vkucherko7" /></a>
+  <a href="https://www.linkedin.com/in/kucherko/"><img src="docs/brand/badge-linkedin.svg" height="22" alt="LinkedIn: kucherko" /></a>
+  <a href="mailto:vkucherko7@gmail.com"><img src="docs/brand/badge-email.svg" height="22" alt="Email: vkucherko7" /></a>
 </p>
 
 Chia is an iOS-first barcode scanner that gives you an instant pass / fail verdict on packaged foods, based on their actual ingredients and additives. Not a vague score, not a paywall, not a five-screen nutrition essay. Point the camera at a barcode; get a warm, honest answer with the reasons behind it.
-
-<br />
 
 <p align="center">
   <img src="https://img.shields.io/badge/platform-iOS-000000?style=flat-square&logo=apple&logoColor=white" alt="Platform iOS" />
@@ -44,6 +42,8 @@ Chia is an iOS-first barcode scanner that gives you an instant pass / fail verdi
   <a href="#roadmap"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/navbtn-roadmap.dark.svg" /><img src="docs/brand/ui/navbtn-roadmap.svg" height="34" alt="Roadmap" /></picture></a>
   <a href="#more"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/navbtn-more.dark.svg" /><img src="docs/brand/ui/navbtn-more.svg" height="34" alt="Contact" /></picture></a>
 </p>
+
+<br />
 
 <p><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/source.dark.svg" /><img src="docs/brand/title/source.svg" height="32" align="absmiddle" alt="A note on the source" /></picture></p>
 
@@ -190,7 +190,7 @@ The five pillars:
 
 </details>
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/rule.dark.svg" /><img src="docs/brand/ui/rule.svg" width="86%" alt="" /></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/rule.dark.svg" /><img src="docs/brand/ui/rule.svg" width="95%" alt="" /></picture></p>
 
 <details>
 <summary><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/scan.dark.svg" /><img src="docs/brand/title/scan.svg" height="32" align="absmiddle" alt="How a scan works" /></picture></summary>
@@ -248,7 +248,7 @@ The verdict state machine (`deriveVerdict`) collapses lookup status + evaluation
 
 </details>
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/rule.dark.svg" /><img src="docs/brand/ui/rule.svg" width="86%" alt="" /></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/rule.dark.svg" /><img src="docs/brand/ui/rule.svg" width="95%" alt="" /></picture></p>
 
 <a id="eng"></a>
 
@@ -277,7 +277,7 @@ The things a strong engineer notices when they read past the screenshots:
 
 </details>
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/rule.dark.svg" /><img src="docs/brand/ui/rule.svg" width="86%" alt="" /></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/rule.dark.svg" /><img src="docs/brand/ui/rule.svg" width="95%" alt="" /></picture></p>
 
 <a id="stack"></a>
 
@@ -311,7 +311,7 @@ The things a strong engineer notices when they read past the screenshots:
 
 </details>
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/rule.dark.svg" /><img src="docs/brand/ui/rule.svg" width="86%" alt="" /></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/rule.dark.svg" /><img src="docs/brand/ui/rule.svg" width="95%" alt="" /></picture></p>
 
 <details>
 <summary><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/title/testing.dark.svg" /><img src="docs/brand/title/testing.svg" height="32" align="absmiddle" alt="Testing & quality" /></picture></summary>
@@ -326,7 +326,7 @@ Chia is built like a product, not a prototype.
 
 </details>
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/rule.dark.svg" /><img src="docs/brand/ui/rule.svg" width="86%" alt="" /></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/rule.dark.svg" /><img src="docs/brand/ui/rule.svg" width="95%" alt="" /></picture></p>
 
 <a id="roadmap"></a>
 
@@ -344,7 +344,7 @@ Honest, forward-looking, and clearly planned, not shipped:
 
 </details>
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/rule.dark.svg" /><img src="docs/brand/ui/rule.svg" width="86%" alt="" /></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/brand/ui/rule.dark.svg" /><img src="docs/brand/ui/rule.svg" width="95%" alt="" /></picture></p>
 
 <a id="more"></a>
 
